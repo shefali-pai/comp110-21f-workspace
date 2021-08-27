@@ -1,4 +1,4 @@
-"""Relational Operators!"""
+"""Relational Operators! Compares numbers so I don't have to."""
 
 __author__ = str(730466264)
 

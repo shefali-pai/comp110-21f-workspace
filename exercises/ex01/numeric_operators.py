@@ -1,4 +1,4 @@
-"""Numeric Operaters Machine!"""
+"""Numeric Operaters Machine! A calculator I made myself."""
 
 __author__ = str(730466264)
 

@@ -1,4 +1,4 @@
-"""My Hype Machine!"""
+"""To keep me motivated this year!"""
 
 __author__ = str(730466264)
 
