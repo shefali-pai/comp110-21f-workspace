@@ -25,4 +25,4 @@ else:
             print("You are going to earn a fortune soon!") 
         else:
             print("You are going to be living your best life very soon!") 
-print("Now go spread positive vibes!")
+print("Now, go spread positive vibes!")
