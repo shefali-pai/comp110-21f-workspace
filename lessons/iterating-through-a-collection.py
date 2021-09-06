@@ -1,4 +1,4 @@
-"""Example of looping through all characters in a string."""
+"""Example of looping through all positions in a string."""
 user_string: str = input("Give me a string! ")
 
 
