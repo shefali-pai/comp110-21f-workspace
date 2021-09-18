@@ -12,7 +12,7 @@ while i <= length - 1:
     position = i + 1
     while position <= length - 1:
         if chosen_word[i] == chosen_word[position]:
-            bool_value: bool = bool(True)
+            bool_value = True
             position = length
             i = length
         position = position + 1
