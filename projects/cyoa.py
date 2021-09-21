@@ -20,6 +20,7 @@ def greet() -> None:
 def main() -> None:
     """Entry point of program."""
     play_again: str = str("yes")
+    global points
     points = 0
     greet()
     while play_again == str("yes"):
@@ -33,15 +34,14 @@ def main() -> None:
             else:
                 choice == str("b")
                 quiz_2(points)
-        print(str(f"Your number of points: {points}"))
         play_again = (input(str(F"Do you want to play again? Print yes or no. {BLUSHING_FACE} ")))
             
 
 def quiz_1() -> None:
     """Disney princess quiz."""
     global points
-    print(str(f"This quiz will allow you to determine which Disney princess you are. You will answer 3 multiple choice questions and find out at the end. Have fun!{HALO_FACE}"))
-    color = input(str("What is your favorite color? a. red, b. yellow, c. green, d. blue. Print a, b, c, or d. "))
+    print(str(f"Hey {player}! This quiz will allow you to determine which Disney princess you are. You will answer 3 multiple choice questions and find out at the end. Have fun!{HALO_FACE}"))
+    color = input(str(f"{player}, what is your favorite color? a. red, b. yellow, c. green, d. blue. Print a, b, c, or d. "))
     if color == str("a"):
         points = points + 1
     else:
@@ -54,7 +54,7 @@ def quiz_1() -> None:
                 color == str("d")
                 points == points + 4
     print(f"Current point value: {points}")
-    hobby = input(str("What is your favorite hobby? a. spending time in nature, b. reading, c. swimming, d. singing. Print a, b, c or d. "))
+    hobby = input(str(f"{player}, what is your favorite hobby? a. spending time in nature, b. reading, c. swimming, d. singing. Print a, b, c or d. "))
     if hobby == str("a"):
         points = points + 1
     else:
@@ -68,7 +68,7 @@ def quiz_1() -> None:
                 points == points + 4
     print(f"Current point value: {points}")
     random_int: int = randint(1, 5)
-    random_task = input(str(f"Would you rather have {random_int} a. Days of no sleep, b. books to read, c. number of feet, or d. glass slipper(s). Print a, b, c, or d. "))
+    random_task = input(str(f"{player}, would you rather have {random_int} a. Days of no sleep, b. books to read, c. number of feet, or d. glass slipper(s). Print a, b, c, or d. "))
     if random_task == str("a"):
         points = points + 1
     else:
@@ -82,7 +82,7 @@ def quiz_1() -> None:
                 points == points + 4
     print(f"Current point value: {points}")
     randint_1: int = randint(1, 12)
-    print(str(f"Thank you for taking the quiz! You will get a number printed based on your results. Look on the list to see where your number is to determine which princess you are! 1-3 is Aurora, 4-6 is Belle, 7-9 is Ariel, and 10-12 is Cinderella. Your number is {randint_1}."))
+    print(str(f"{player}! Thank you for taking the quiz! You will get a number printed based on your results. Look on the list to see where your number is to determine which princess you are! 1-3 is Aurora, 4-6 is Belle, 7-9 is Ariel, and 10-12 is Cinderella. Your number is {randint_1}."))
     
 
 def quiz_2(x: int) -> int:
@@ -103,6 +103,7 @@ def quiz_2(x: int) -> int:
                 pick_1 == "4"
                 points = points + 4
     print(str("Based on the number of points you have, you will receive a fortune. If you have 1 point, you will have a great day tomorrow. If you have 2 points, you are going to get a lot of money tomorrow. If you have 3 points, you are going to meet your best friend tomorrow. If you have four points, you are going to go on a nice vacation next summer."))
+    print(str(f"Your number of points: {points}"))
     return x
 
     
