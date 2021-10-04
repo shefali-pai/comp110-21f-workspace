@@ -7,17 +7,19 @@ from typing import List
 
 
 def main() -> None: 
+    """Entry of function."""
     list_1: List[int] = [1, 3, 5]
     list_2: List[int] = [1]
     a_list: List[int] = []
     number_1: int = 1
-    number_2: int = 3
+    number_2: int = 4
     print(only_evens(list_1))
     print(sub(a_list, number_1, number_2))
     print(concat(list_1, list_2))
 
 
 def only_evens(list_1: List[int]) -> List[int]:
+    """Finding evens in a list."""
     i: int = 0
     even_list: List[int] = []
 
@@ -29,10 +31,9 @@ def only_evens(list_1: List[int]) -> List[int]:
 
 
 def sub(a_list: List[int], number_1: int, number_2: int) -> List[int]:
+    """Making a new list with some list items."""
     new_list: List[int] = []
     empty_list: List[int] = []
-    # new_list.append(a_list[number_1])
-    # new_list.append(a_list[number_2 - 1])
 
     if len(a_list) == 0: 
         return empty_list
@@ -55,6 +56,7 @@ def sub(a_list: List[int], number_1: int, number_2: int) -> List[int]:
 
 
 def concat(list_1: List[int], list_2: List[int]) -> List[int]:
+    """Putting two lists together."""
     i: int = 0
     concat_list: List[int] = []
 
