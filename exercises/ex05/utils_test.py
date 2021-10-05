@@ -33,7 +33,7 @@ def test_only_evens_input_empty() -> None:
 def test_sub_normal_case() -> None: 
     """Seeing if normal index numbers are printed."""
     input_list: List[int] = [1, 2, 3, 4, 5]
-    sub_list: List[int] = [2, 4]
+    sub_list: List[int] = [2, 3, 4]
     number_1: int = 1
     number_2: int = 4
     assert sub(input_list, number_1, number_2) == sub_list
@@ -51,7 +51,7 @@ def test_sub_input_empty() -> None:
 def test_sub_large_boundaries() -> None: 
     """Using out of range index numbers as boundaries."""
     input_list: List[int] = [1, 2, 3, 4, 5]
-    sub_list: List[int] = [1, 5]
+    sub_list: List[int] = [1, 2, 3, 4, 5]
     number_1: int = -1
     number_2: int = 6
     assert sub(input_list, number_1, number_2) == sub_list

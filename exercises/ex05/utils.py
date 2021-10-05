@@ -10,7 +10,7 @@ def main() -> None:
     """Entry of function."""
     list_1: List[int] = [1, 3, 5]
     list_2: List[int] = [1]
-    a_list: List[int] = []
+    a_list: List[int] = [1, 2, 3, 4, 5]
     number_1: int = 1
     number_2: int = 4
     print(only_evens(list_1))
@@ -33,24 +33,17 @@ def only_evens(list_1: List[int]) -> List[int]:
 def sub(a_list: List[int], number_1: int, number_2: int) -> List[int]:
     """Making a new list with some list items."""
     new_list: List[int] = []
-    empty_list: List[int] = []
 
-    if len(a_list) == 0: 
-        return empty_list
-    else: 
-        if number_1 > len(a_list) - 1: 
-            return empty_list
-        else: 
-            if number_2 <= 0: 
-                return empty_list
-
+    if len(a_list) == 0 or number_1 > len(a_list) - 1 or number_2 <= 0: 
+        return new_list
     if number_1 < 0:
-        new_list.append(a_list[0])
+        number_1 = 0
     if number_2 > len(a_list):
-        new_list.append(a_list[len(a_list) - 1])
-    else: 
-        new_list.append(a_list[number_1])
-        new_list.append(a_list[number_2 - 1])
+        number_2 = len(a_list)
+    i: int = number_1
+    while i >= number_1 and i < number_2: 
+        new_list.append(a_list[i])
+        i += 1
     
     return new_list
 
