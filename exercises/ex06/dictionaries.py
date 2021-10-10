@@ -5,18 +5,18 @@ __author__ = "730466264"
 
 # Define your functions below
 
-def main() -> None: 
+def main() -> None:
+    """Entry point of the code.""" 
     dict_1: dict[str, str] = {'a': '1', 'b': '2', 'c': 'x', 'd': 'w'}
     dict_2: dict[str, str] = {'a': 'blue', 'b': 'blue', 'c': 'green', 'd': 'green'}
     list_1: list[str] = []
     print(invert(dict_1))
     print(favorite_color(dict_2))
     print(count(list_1))
-    # print_dict(dict_1)
-    # print_dict(invert(dict_1))
 
 
 def invert(dict_1: dict[str, str]) -> dict[str, str]:
+    """Inverts the key and value in a dictionary."""
     invert_dict: dict[str, str] = {}
     for key in dict_1:
         for inverted_key in invert_dict:
@@ -27,6 +27,7 @@ def invert(dict_1: dict[str, str]) -> dict[str, str]:
 
 
 def favorite_color(dict_2: dict[str, str]) -> str: 
+    """Prints the most repeated favorite color."""
     favorite_color: str
     dict_count: dict[str, int] = {}
     found: bool = bool(False)
@@ -39,7 +40,7 @@ def favorite_color(dict_2: dict[str, str]) -> str:
         if not found: 
             dict_count[dict_2[key]] = 1 
         found = False
-        
+
     compare_number: int = 0 
     for key in dict_count: 
         if dict_count[key] > compare_number:
@@ -49,6 +50,7 @@ def favorite_color(dict_2: dict[str, str]) -> str:
 
 
 def count(list_1: list[str]) -> dict[str, int]:
+    """Organizes a list to see how many of each item there is in the list."""
     dict_count: dict[str, int] = {}
     i: int = 0
     found: bool = bool(False)
@@ -63,13 +65,6 @@ def count(list_1: list[str]) -> dict[str, int]:
         i += 1
         found = False
     return dict_count
-
-
-def print_dict(dict_1: dict[str, str]) -> None: 
-    for key in dict_1:
-        print(f"Key: {key} -> Value: {dict_1[key]}")
-    
-    return None
 
 
 if __name__ == "__main__":
